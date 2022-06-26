@@ -20,35 +20,35 @@ At this point all manifests are version `0`. The format may change over time and
 version: 0
 ```
 
-Next we start defining the `network` portion of the manifest. A Wasmflow network is a collection of schematics. The first step in defining a network is defining the providers `vino` will initialize.
+Next we start defining the `network` portion of the manifest. A Wasmflow network is a collection of schematics. The first step in defining a network is defining the collections `wasmflow` will initialize.
 
 ```yaml {title="./salutations.yaml"}
 ---
-# yaml-language-server: $schema=https://vino.dev/schemas/manifest/v0.json
+# yaml-language-server: $schema=https://wasmflow.com/schemas/manifest/v0.json
 version: 0
 network:
-  providers:
+  collections:
     - namespace: my_component
       kind: WaPC
       reference: ./build/my_component_s.wasm
 ```
 
-The `namespace` is how you'll reference the provider in your schematics. The `kind` denotes the type of provider. There are multiple kinds but we're focusing on the WaPC WebAssembly provider for now. `reference` is a `kind`-specific way of finding or initializing the provider. For `WaPc` providers, the `reference` is a filesystem path or OCI url.
+The `namespace` is how you'll reference the provider in your schematics. The `kind` denotes the type of provider. There are multiple kinds but we're focusing on the WaPC WebAssembly provider for now. `reference` is a `kind`-specific way of finding or initializing the provider. For `WaPc` collections, the `reference` is a filesystem path or OCI url.
 
 Next, we define our schematics:
 
 ```yaml {title="./salutations.yaml"}
 ---
-# yaml-language-server: $schema=https://vino.dev/schemas/manifest/v0.json
+# yaml-language-server: $schema=https://wasmflow.com/schemas/manifest/v0.json
 version: 0
 network:
-  providers:
+  collections:
     - namespace: my_component
       kind: WaPC
       reference: ./build/my_component_s.wasm
   schematics:
     - name: hello
-      providers:
+      collections:
         - my_component
       instances:
         greet:
@@ -59,22 +59,22 @@ network:
 
 A schematic's `name` is how you'll reference it by external invocation or from within other schematics.
 
-The `providers` field is a list of providers (by namespace) that this schematic has access to.
+The `collections` field is a list of collections (by namespace) that this schematic has access to.
 
 The `instances` are named pointers to components in a namespace. In this case `greet` points to `my_component::greet` and `concatenate` points to `my_component::concatenate`. Think of `instances` like variables. Multiple `instances` can point to the same component, but each `instance` can be referenced separately. This is important for the next section: `connections`.
 
 ```yaml {title="./salutations.yaml"}
 ---
-# yaml-language-server: $schema=https://vino.dev/schemas/manifest/v0.json
+# yaml-language-server: $schema=https://wasmflow.com/schemas/manifest/v0.json
 version: 0
 network:
-  providers:
+  collections:
     - namespace: my_component
       kind: WaPC
       reference: ./build/my_component_s.wasm
   schematics:
     - name: hello
-      providers:
+      collections:
         - my_component
       instances:
         greet:
@@ -143,19 +143,19 @@ connections:
 
 {{< /card >}}
 
-Now run your schematic directly with `vino run`.
+Now run your schematic directly with `wasmflow invoke`.
 
 ```sh
-$ vino run salutations.yaml hello -- --first_name=Jane --last_name=" Doe"
+$ wasmflow invoke salutations.yaml hello -- --first_name=Jane --last_name=" Doe"
 {"output":{"value":"Hello Jane Doe"}}
 ```
 
-Just as with a wasm file, start a GRPC microservice or HTTP server with `vino serve`:
+Just as with a wasm file, start a GRPC microservice or HTTP server with `wasmflow serve`:
 
 ```sh
-$ vino serve salutations.yaml --rpc --rpc-port 8060
-2021-11-16T14:19:39  INFO Starting RPC server
+$ wasmflow serve salutations.yaml --rpc --rpc-port 8060
 2021-11-16T14:19:39  INFO Host started
+2021-11-16T14:19:39  INFO Starting RPC server
 2021-11-16T14:19:39  INFO GRPC server bound to 127.0.0.1 on port 8060
 2021-11-16T14:19:39  INFO Waiting for Ctrl-C
 ```
@@ -163,7 +163,7 @@ $ vino serve salutations.yaml --rpc --rpc-port 8060
 And use `wafl` the same way we already have.
 
 ```sh
-$ wafl invoke --port=8060 hello -- --first_name=Jane --last_name=Doe
+$ wafl rpc invoke --port=8060 hello -- --first_name=Jane --last_name=Doe
 {"output":{"value":"Hello Jane Doe"}}
 ```
 
