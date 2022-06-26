@@ -1,6 +1,93 @@
 /*
-
-Add styles or override variables from the theme here.
-
+Bootstrap variables overrides for theme.
+See https://github.com/twbs/bootstrap/pull/23260
 */
 
+$gray-100: #f8f9fa !default;
+$gray-200: #eee !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ccc !default;
+$gray-500: #adb5bd !default;
+$gray-600: #797676 !default;
+$gray-700: #495057 !default;
+$gray-800: #333 !default;
+$gray-900: #222 !default;
+
+$yellow: #f2bf4e;
+$orange: rgb(235, 133, 28);
+$red: rgb(240, 55, 40);
+$black: #222;
+$body-bg: $black;
+$body-color: $gray-300;
+$blue: rgb(12, 111, 216);
+$border-radius: 0.1rem !default;
+$border-radius-lg: 0.1rem !default;
+$border-radius-sm: 0.1rem !default;
+$primary: $red;
+$teal: rgb(20, 177, 131);
+$success: $teal;
+$danger: $orange;
+$link-decoration: underline;
+$link-color: $success;
+$component-active-bg: $success;
+$jumbotron-bg: $gray-900;
+$card-bg: $gray-900;
+$list-group-bg: $gray-800;
+$modal-content-bg: $gray-600;
+$white: #f0f0f0;
+$modal-content-border-color: rgba($white, 0.2);
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $gray-400 $gray-600;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $gray-600;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $gray-400;
+  border-radius: 10px;
+  // border: 1px solid red;
+}
+
+.btn {
+  border-radius: $border-radius !important;
+
+  &-lg {
+    border-radius: $border-radius-lg !important;
+  }
+
+  &-sm {
+    border-radius: $border-radius-sm !important;
+  }
+}
+
+.td-sidebar-nav {
+  &__section-title {
+    a {
+      color: $gray-100 !important;
+      text-decoration: none !important;
+    }
+  }
+
+  .td-sidebar-link {
+    &__page {
+      color: $gray-200 !important;
+    }
+  }
+
+  a {
+    &:hover {
+      color: $teal !important;
+    }
+  }
+}

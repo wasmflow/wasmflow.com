@@ -5,10 +5,10 @@ linkTitle: "Announcing Docsy"
 description: "The Docsy Hugo theme lets project maintainers and contributors focus on content, not on reinventing a website infrastructure from scratch"
 author: Riona MacNamara ([@rionam](https://twitter.com/bepsays))
 resources:
-- src: "**.{png,jpg}"
-  title: "Image #:counter"
-  params:
-    byline: "Photo: Riona MacNamara / CC-BY-CA"
+  - src: "**.{png,jpg,svg}"
+    title: "Image #:counter"
+    params:
+      byline: ""
 ---
 
 **This is a typical blog post that includes images.**
@@ -42,5 +42,3 @@ Fetch and scale an image in the upcoming Hugo 0.43.
 ```
 
 The image will be rendered at the size and byline specified in the front matter.
-
-

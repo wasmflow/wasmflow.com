@@ -21,7 +21,7 @@ _Tip: Starting `wasmflow serve` without providing a `--port` argument will cause
 
 ### Testing your microservice with `wafl`
 
-`wafl` is the vino controller which can talk to providers (such as your WebAssembly module) over the Wasmflow RPC protocol. Using the port from above, run `wafl rpc invoke` to make the same request we made in the last step.
+`wafl` is the Wasmflow utility binary that can speak the Wasmflow RPC protocol (among other things). Using the port from above, run `wafl rpc invoke` to make the same request we made in the last step.
 
 ```sh
 $ wafl rpc invoke --port=8060 concatenate -- --left=Hello --right=World

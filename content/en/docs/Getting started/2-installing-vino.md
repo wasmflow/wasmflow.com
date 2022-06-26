@@ -8,9 +8,9 @@ description: >
 
 ## Pre-build binary installation
 
-Head over to [releases.vino.dev](https://releases.vino.dev/) to get the latest version of the Wasmflow tools for your platform
+Head over to [wasmflow/releases](https://github.com/wasmflow/wasmflow/releases) to get the latest version of the Wasmflow tools for your platform
 
-Unless you are developing on Wasmflow, you should stick with the pre-built binaries.
+Unless you are developing on Wasmflow's internal code, you should stick with the pre-built binaries.
 
 ## Building from source
 
@@ -21,6 +21,6 @@ _Note: The source code for Wasmflow tools is available to limited users at the m
 `make install` will build everything in the Wasmflow monorepo and install any binaries into your `~/.cargo/bin` directory.
 
 ```sh
-$ git clone https://github.com/vinodotdev/vino
-$ cd vino && make install
+$ git clone https://github.com/wasmflow/wasmflow
+$ cd wasmflow && make install
 ```
