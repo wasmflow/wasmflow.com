@@ -2,6 +2,7 @@
 title: "Running your WebAssembly component as a microservice"
 linkTitle: "WebAssembly Microservices"
 weight: 7
+notoc: true
 description: >
   Use `wasmflow` to turn any WebAssembly module into a standalone microservice.
 ---
@@ -15,9 +16,9 @@ $ wasmflow serve ./build/my_component_s.wasm --rpc --rpc-port 8060
 2022-06-20T22:16:51  INFO Starting RPC server
 ```
 
-{{% pageinfo %}}
-_Tip: Starting `wasmflow serve` without providing a `--port` argument will cause `wasmflow` to automatically selecte a random, unused port._
-{{% /pageinfo %}}
+{{< card title="Tip" >}}
+Starting `wasmflow serve` without providing a `--port` argument will cause `wasmflow` to automatically selecte a random, unused port.
+{{< /card >}}
 
 ### Testing your microservice with `wafl`
 

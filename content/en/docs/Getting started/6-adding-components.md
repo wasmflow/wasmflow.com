@@ -2,6 +2,7 @@
 title: "Adding components"
 linkTitle: "Adding components"
 weight: 6
+notoc: true
 description: >
   Adding additional components to our module
 ---
@@ -30,11 +31,11 @@ type Outputs {
 }
 ```
 
-{{% pageinfo %}}
+{{< card title="Tip" >}}
 _Without knowing anything about the implementation, can you guess what this component will do? If you guessed that it is going combine two strings together as output, you're correct!_
 
 _This scenario is contrived but it extends beyond "Hello World" style tutorials. It's an important part of programming on Wasmflow. Components don't need to accept data they don't act on, so you won't often see many inputs nor complex types as input. You'll frequently deal with small bits of data like strings and numbers and aggregate them at some final points. Component ports connect directly to each other in a graph or [flow](/concepts/terminology)), freeing each component to be laser focused on its purpose._
-{{% /pageinfo %}}
+{{< /card >}}
 
 ### Generate the new code
 

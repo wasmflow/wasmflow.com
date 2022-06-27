@@ -3,11 +3,8 @@
         <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
 		<span class="navbar-logo">
 
-      {{ $logo := resources.Get "images/logo-white-nav.png" }}
-      {{ if $cover }}
         {{ $logo := resources.Get "images/logo-white-color-nav.png" }}
-      {{ end }}
-      <img class="td-cover-logo" src="{{ $logo.RelPermalink }}" alt="Wasmflow Logo">
+        <img class="td-cover-logo" src="{{ $logo.RelPermalink }}" alt="Wasmflow Logo">
 
     </span>
 	</a>

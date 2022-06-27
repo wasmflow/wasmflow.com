@@ -2,6 +2,7 @@
 title: "Wiring your component into a schematic"
 linkTitle: "Schematics"
 weight: 10
+notoc: true
 draft: false
 description: >
   Bringing it all together
@@ -89,7 +90,7 @@ network:
 
 `connections` are how an instance of a component connect to other instances of other components. It works just like how you piped commands together on the command line, except the connections are now embedded in configuration.
 
-{{% pageinfo %}}
+{{< card title="Tip" >}}
 The `connections` above are written in [short form syntax](/configuration/short-form-syntax/) which is a light layer of abstraction to simplify writing connections by hand.
 
 ###### `<>[first_name] => concatenate[left]`
@@ -140,7 +141,7 @@ connections:
       port: output
 ```
 
-{{%/ pageinfo %}}
+{{< /card >}}
 
 Now run your schematic directly with `vino run`.
 

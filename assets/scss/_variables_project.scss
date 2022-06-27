@@ -3,91 +3,99 @@ Bootstrap variables overrides for theme.
 See https://github.com/twbs/bootstrap/pull/23260
 */
 
-$gray-100: #f8f9fa !default;
-$gray-200: #eee !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ccc !default;
-$gray-500: #adb5bd !default;
-$gray-600: #797676 !default;
-$gray-700: #495057 !default;
-$gray-800: #333 !default;
-$gray-900: #222 !default;
+$font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+  Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  "Courier New", monospace;
 
-$yellow: #f2bf4e;
-$orange: rgb(235, 133, 28);
-$red: rgb(240, 55, 40);
-$black: #222;
-$body-bg: $black;
-$body-color: $gray-300;
-$blue: rgb(12, 111, 216);
+$blue: #5e50f9 !default;
+$indigo: #6610f2 !default;
+$purple: #6a008a !default;
+$pink: #e91e63 !default;
+$red: #f96868 !default;
+$orange: #f2a654 !default;
+$yellow: #f6e84e !default;
+$green: #46c35f !default;
+$teal: #58d8a3 !default;
+$cyan: #57c7d4 !default;
+$white: #ffffff !default;
+$gray: #434a54 !default;
+$gray-light: #aab2bd !default;
+$gray-lighter: #e8eff4 !default;
+$gray-lightest: #e6e9ed !default;
+$gray-dark: #0f1531 !default;
+$black: #000000 !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #191b1e !default;
+
+$primary: darken($red, 40); //#6640b2;
+$secondary: #a3a4a5;
+$success: #00d082;
+$info: #1cbccd;
+$warning: #ffbf36;
+$danger: #f83e37;
+$light: #f8f9fa;
+$dark: #08080d;
+
+$body-font-family: var($font-sans-serif);
+$body-font-size: 1rem;
+$body-font-weight: 400;
+$body-line-height: 1.5;
+
+$body-bg: desaturate(darken($primary, 35%), 30); //#1e1e2f
+$body-color: $gray-400;
+
+$td-sidebar-tree-root-color: $gray-500;
+$toc-link-color: $gray-400;
+$toc-link-hover: $orange;
+
+$link-color: $orange;
+$link-decoration: underline;
+
+$card-bg: desaturate(darken($primary, 25), 15); //#26293b
+$card-color: $gray-300;
+
+$code-color: $gray-100;
+
+$component-active-bg: $success;
+$jumbotron-bg: $gray-900;
+$list-group-bg: $gray-800;
+$modal-content-bg: $gray-600;
+$modal-content-border-color: rgba($white, 0.2);
+
+$gradient: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0.15),
+  rgba(255, 255, 255, 0)
+);
+
 $border-radius: 0.1rem !default;
 $border-radius-lg: 0.1rem !default;
 $border-radius-sm: 0.1rem !default;
-$primary: $red;
-$teal: rgb(20, 177, 131);
-$success: $teal;
-$danger: $orange;
-$link-decoration: underline;
-$link-color: $success;
-$component-active-bg: $success;
-$jumbotron-bg: $gray-900;
-$card-bg: $gray-900;
-$list-group-bg: $gray-800;
-$modal-content-bg: $gray-600;
-$white: #f0f0f0;
-$modal-content-border-color: rgba($white, 0.2);
 
-/* Works on Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: $gray-400 $gray-600;
-}
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
+  ),
+  $theme-colors
+);
 
-/* Works on Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 12px;
-}
-
-*::-webkit-scrollbar-track {
-  background: $gray-600;
-  border-radius: 10px;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: $gray-400;
-  border-radius: 10px;
-  // border: 1px solid red;
-}
-
-.btn {
-  border-radius: $border-radius !important;
-
-  &-lg {
-    border-radius: $border-radius-lg !important;
-  }
-
-  &-sm {
-    border-radius: $border-radius-sm !important;
-  }
-}
-
-.td-sidebar-nav {
-  &__section-title {
-    a {
-      color: $gray-100 !important;
-      text-decoration: none !important;
-    }
-  }
-
-  .td-sidebar-link {
-    &__page {
-      color: $gray-200 !important;
-    }
-  }
-
-  a {
-    &:hover {
-      color: $teal !important;
-    }
-  }
-}
+@import "./overrides";
+@import "./scrollbar";
+@import "./utility";
