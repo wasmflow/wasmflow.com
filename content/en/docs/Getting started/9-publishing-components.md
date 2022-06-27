@@ -2,6 +2,7 @@
 title: "Publishing components"
 linkTitle: "Publishing components"
 weight: 9
+notoc: true
 description: >
   Store and run signed artifacts from an OCI registry.
 ---
@@ -12,9 +13,9 @@ Wasmflow tools will automatically pull from an OCI registry if the passed filena
 docker run -it --rm -p 5000:5000 registry
 ```
 
-{{% pageinfo %}}
+{{< card title="Tip" >}}
 _Note: This will spin up an insecure local registry. It's suitable for testing but production registries will need more configuration._
-{{% /pageinfo %}}
+{{< /card >}}
 
 ### Publish your artifact
 

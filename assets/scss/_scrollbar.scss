@@ -1,0 +1,21 @@
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $gray-400 $gray-600;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $gray-600;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $gray-400;
+  border-radius: 10px;
+  // border: 1px solid red;
+}

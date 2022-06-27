@@ -2,6 +2,8 @@
 title: "Prerequisites for the getting started guide"
 linkTitle: "Prerequisites"
 weight: 1
+notoc: true
+
 description: >
   Dependencies you may need to install for this guide
 ---

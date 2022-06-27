@@ -2,6 +2,7 @@
 title: "Build and run your new WebAssembly component"
 linkTitle: "Build and Run"
 weight: 4
+notoc: true
 description: >
   Build and run your WebAssembly component with `wasmflow`
 ---
@@ -16,9 +17,9 @@ $ make
 
 Make generates source code, builds your WebAssembly module, signs it with [`wafl`] and stores both the signed and unsigned artifacts in a `/build` directory.
 
-{{% pageinfo %}}
+{{< card title="Tip" >}}
 _Note: The build process also generates source code from your schema(s). Do not edit any that are prefixed with a "This is generated" warning or your changes will be lost on next build._
-{{% /pageinfo %}}
+{{< /card >}}
 
 ## Run your component
 
@@ -53,9 +54,9 @@ $ wasmflow invoke ./build/my_component_s.wasm greet --trace -- --input="my_input
 2022-06-20T21:57:02 TRACE stream complete
 ```
 
-{{% pageinfo %}}
+{{< card title="Tip" >}}
 _Note: The name of your component is dictated by the `namespace` definition in your schema. The filename is normalized based on best practices for the target language._
-{{% /pageinfo %}}
+{{< /card >}}
 
 In the next step we'll add logic to our component.
 

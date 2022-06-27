@@ -2,6 +2,7 @@
 title: "Adding logic to your component"
 linkTitle: "Adding logic"
 weight: 5
+notoc: true
 description: >
   How to work with component ports
 ---
@@ -39,9 +40,9 @@ outputs.output.done(greeting)?;
 
 The first line uses Rust's `format!()` macro to format our input string into a suitable greeting. The second line takes that greeting string and pushes it to the output port named `output`. `done()` sends and closes a port in one command.
 
-{{% pageinfo %}}
+{{< card title="Tip" >}}
 _Tip: Change the port names in your Apex schema and rebuild your component to see how the code generation reflects the changes._
-{{% /pageinfo %}}
+{{< /card >}}
 
 Build and run your component with the new logic to see the output:
 
@@ -51,8 +52,8 @@ $ wasmflow invoke ./build/my_component_s.wasm greet -- --input="my_input"
 {"output":{"value":"Hello my_input"}}
 ```
 
-{{% pageinfo %}}
+{{< card title="Tip" >}}
 _Tip: Change the `input.input` expression to something like `input.input.to_uppercase()` to see how modules can act on data as it comes through._
-{{% /pageinfo %}}
+{{< /card >}}
 
 The next tutorial goes over how to add additional components to our WebAssembly module.

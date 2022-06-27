@@ -2,6 +2,7 @@
 title: "Wiring networks onto networks"
 linkTitle: "Networks as providers"
 weight: 11
+notoc: true
 draft: false
 description: >
   Coming full circle
@@ -41,7 +42,7 @@ network:
         - concatenate[output] => <>
 ```
 
-{{% pageinfo %}}
+{{< card title="Tip" >}}
 
 ###### `'", have a great day" => concatenate[right]'`
 
@@ -54,7 +55,7 @@ This new line shows how to define defaults inline with connections. Wasmflow par
   default: ", have a great day"
 ```
 
-{{%/ pageinfo %}}
+{{< /card >}}
 
 Run your new manifest via `vino run` just as you did the last.
 

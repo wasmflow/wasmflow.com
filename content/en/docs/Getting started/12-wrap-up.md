@@ -2,6 +2,7 @@
 title: "Wrapping it up"
 linkTitle: "Wrap-up"
 weight: 12
+notoc: true
 draft: false
 description: >
   Where to go next.

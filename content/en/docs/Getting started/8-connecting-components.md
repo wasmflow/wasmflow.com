@@ -2,6 +2,7 @@
 title: "Connecting components"
 linkTitle: "Connecting components"
 weight: 8
+notoc: true
 description: >
   Start connecting simple components on the command line.
 ---
@@ -18,9 +19,9 @@ $ wasmflow invoke ./build/my_component_s.wasm concatenate -- --left=Jane --right
 
 `wasmflow` output is directly pipable to another execution of `wasmflow`! You can string together any number of connections to experiment, test, or build on the command line.
 
-{{% pageinfo %}}
+{{< card title="Tip" >}}
 _Note: `wasmflow` connects output from a named port to an incoming port of the same name with one exception shown above. Data coming out of a port named `output` will be mapped to a port named `input` on the downstream component. This is a common practice and makes CLI testing more intuitive. Turn it off by passing the `--raw` flag to `wasmflow`._
-{{% /pageinfo %}}
+{{< /card >}}
 
 ### Connecting to remote components
 
