@@ -36,7 +36,8 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #191b1e !default;
 
-$primary: darken($red, 40);
+// $primary: darken($red, 40);
+$primary: #f6382c;
 $secondary: #a3a4a5;
 $success: #00d082;
 $info: #1cbccd;
@@ -50,7 +51,7 @@ $body-font-size: 1rem;
 $body-font-weight: 400;
 $body-line-height: 1.5;
 
-$body-bg: desaturate(darken($primary, 35%), 30);
+$body-bg: desaturate(darken($primary, 50%), 70);
 $body-color: $gray-400;
 
 $border-color: $gray-600;

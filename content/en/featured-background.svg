@@ -4,21 +4,19 @@
 	<g id="Group" style="isolation:isolate">
 		<g id="Layer1">
 			<g id="g2" mask="url(#mask2)">
-				<svg width="100%" height="100%" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-					<g>
-						<g filter="url(#filter0_f_17_21)">
-							<path d="M125.5 322.2L0 0V322.2L385.5 17L125.5 322.2Z" fill="#DC4D34">
-							</path>
-							<path d="M0 322.2V400H240H320L385.5 17L0 322.2Z" fill="#FF043D">
-							</path>
-						</g>
-					</g>
+				<svg width="100%" height="100%" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
 					<defs>
-						<filter id="filter0_f_17_21" x="-159.933" y="-159.933" width="719.867" height="719.867">
-							<feGaussianBlur stdDeviation="79.9667" result="effect1_foregroundBlur_17_21">
-							</feGaussianBlur>
+						<filter height="200%" id="svg_4_blur" width="300%" x="-50%" y="-50%">
+							<feGaussianBlur id="svg_6" result="effect1_foregroundBlur_17_21" stdDeviation="60" />
 						</filter>
 					</defs>
+					<g class="layer">
+						<title>
+							Layer 1
+						</title>
+						<path d="m259.58,41.2l-327.23,-41.2l-2.35,398.2l462.5,-96.2l-132.92,-260.8z" fill="#F97F36" filter="url(#svg_4_blur)" id="svg_3" />
+						<path d="m205.57,96.2l-181.57,234.8l285.01,69l104.74,0l85.76,-383l-293.93,79.2z" fill="#F63F2D" filter="url(#svg_4_blur)" id="svg_4" />
+					</g>
 				</svg>
 			</g>
 			<g id="g3" mask="url(#mask3)">

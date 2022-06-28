@@ -1,11 +1,9 @@
 {{ $cover := and (.HasShortcode "blocks/cover") (not .Site.Params.ui.navbar_translucent_over_cover_disable) }}
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark {{ if $cover}} td-navbar-cover {{ end }}flex-column flex-md-row td-navbar">
-        <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
+  <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
 		<span class="navbar-logo">
-
         {{ $logo := resources.Get "images/logo-white-color-nav.png" }}
         <img class="td-cover-logo" src="{{ $logo.RelPermalink }}" alt="Wasmflow Logo">
-
     </span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">

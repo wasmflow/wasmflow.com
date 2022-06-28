@@ -10,18 +10,59 @@
   }
 }
 
-.td-sidebar-nav {
-  &__section-title {
-    a {
-      color: $toc-link-color !important;
-      text-decoration: none !important;
+.td {
+  &-toc {
+    #TableOfContents {
+      // Hugo's ToC is a mouthful, this can be used to style the top level h2 entries.
+      > ul > li > ul > li > a {
+      }
+
+      a {
+        color: $toc-link-color !important;
+        text-decoration: none;
+
+        &:hover {
+          color: $toc-link-hover !important;
+          text-decoration: none;
+        }
+      }
     }
   }
-
-  a {
-    &:hover {
-      color: $toc-link-hover !important;
+  &-box {
+    &--primary {
+      background-color: darken($primary, 30) !important;
     }
+  }
+  &-navbar {
+    background: darken($primary, 40) !important;
+    &-cover {
+      background: darken($primary, 30) !important;
+    }
+  }
+  &-sidebar {
+    &__inner {
+      height: auto !important;
+    }
+    &-nav {
+      max-height: none !important;
+      overflow-y: auto;
+      &__section-title {
+        a {
+          color: $toc-link-color !important;
+          text-decoration: none !important;
+        }
+      }
+
+      a {
+        &:hover {
+          color: $toc-link-hover !important;
+        }
+      }
+    }
+  }
+  &-post-card {
+    background: inherit !important;
+    border: none !important;
   }
 }
 
@@ -29,43 +70,40 @@
   background: $gray-800 !important;
 }
 
-.td-sidebar-nav {
-  max-height: none !important;
-  overflow-y: auto;
+header .navbar-bg-onscroll {
+  background: darken($primary, 35) !important;
 }
 
-.td-sidebar {
-  &__inner {
-    height: auto !important;
+.btn {
+  transition: none !important;
+  border-radius: 6px !important;
+  border-width: 4.5px !important;
+
+  &-lg {
+    border-radius: 7px !important;
+    border-width: 6px !important;
+  }
+
+  &-sm {
+    border-radius: 5px !important;
+    border-width: 3px !important;
+  }
+
+  &.btn-primary {
+    background-color: adjust-color(darken($primary, 60), $alpha: -0.5);
+    background-image: none;
+  }
+  &.btn-secondary {
+    background-color: adjust-color(darken($black, 60), $alpha: -0.5);
+    background-image: none;
   }
 }
 
-.td-toc {
-  #TableOfContents {
-    // Hugo's ToC is a mouthful, this can be used to style the top level h2 entries.
-    > ul > li > ul > li > a {
-    }
-
-    a {
-      color: $toc-link-color !important;
-      text-decoration: none;
-
-      &:hover {
-        color: $toc-link-hover !important;
-        text-decoration: none;
-      }
-    }
-  }
+.lead {
+  font-size: 18pt !important;
+  font-weight: 500 !important;
 }
 
-.td-navbar-cover {
-  background: darken($primary, 10) !important;
-}
-
-.navbar-bg-onscroll {
-  background: darken($primary, 10) !important;
-}
-
-.td-navbar {
-  background: darken($primary, 10) !important;
+.navbar-nav {
+  padding-top: 2px;
 }
