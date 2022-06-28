@@ -36,7 +36,7 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #191b1e !default;
 
-$primary: darken($red, 40); //#6640b2;
+$primary: darken($red, 40);
 $secondary: #a3a4a5;
 $success: #00d082;
 $info: #1cbccd;
@@ -50,17 +50,18 @@ $body-font-size: 1rem;
 $body-font-weight: 400;
 $body-line-height: 1.5;
 
-$body-bg: desaturate(darken($primary, 35%), 30); //#1e1e2f
+$body-bg: desaturate(darken($primary, 35%), 30);
 $body-color: $gray-400;
 
-$td-sidebar-tree-root-color: $gray-500;
+$border-color: $gray-600;
+$td-sidebar-tree-root-color: $gray-600;
 $toc-link-color: $gray-400;
 $toc-link-hover: $orange;
 
 $link-color: $orange;
 $link-decoration: underline;
 
-$card-bg: desaturate(darken($primary, 25), 15); //#26293b
+$card-bg: desaturate(darken($primary, 20), 15);
 $card-color: $gray-300;
 
 $code-color: $gray-100;
