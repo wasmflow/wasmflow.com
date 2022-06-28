@@ -9,4 +9,4 @@ description: >
 
 {{< card title="Tip" >}}
 Keep the [Terminology](/docs/concepts/terminology/) section on hand to help with any new terms.
-{{< card >}}
+{{< /card >}}
