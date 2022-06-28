@@ -1,6 +1,7 @@
 ---
 title: "Our Philosophy"
 linkTitle: "Philosophy"
+weight: 2
 description: >
   Acknowledging the reality of software.
 ---

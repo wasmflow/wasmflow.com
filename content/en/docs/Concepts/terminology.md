@@ -1,6 +1,7 @@
 ---
 title: "Terminology"
 linkTitle: "Terminology"
+weight: 3
 description: >
   Providers, modules, components, schematics, oh my!
 ---
