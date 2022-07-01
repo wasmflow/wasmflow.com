@@ -11,11 +11,11 @@
 						</filter>
 					</defs>
 					<g class="layer">
-						<title>
-							Layer 1
-						</title>
-						<path d="m259.58,41.2l-327.23,-41.2l-2.35,398.2l462.5,-96.2l-132.92,-260.8z" fill="#D55406" filter="url(#svg_4_blur)" id="svg_3" />
-						<path d="m205.57,96.2l-181.57,234.8l285.01,69l104.74,0l85.76,-383l-293.93,79.2z" fill="#BA1808" filter="url(#svg_4_blur)" id="svg_4" />
+						<path d="m259.58,41.2l-327.23,-41.2l-2.35,398.2l462.5,-96.2l-132.92,-260.8z" fill="#9F3F04" filter="url(#svg_4_blur)" id="svg_3">
+							<animate attributeName="width" values="0%;100%;0%" begin="0s" dur="2s" repeatCount="indefinite" />
+						</path>
+						<path d="m205.57,96.2l-181.57,234.8l285.01,69l104.74,0l85.76,-383l-293.93,79.2z" fill="#BA1808" filter="url(#svg_4_blur)" id="svg_4">
+						</path>
 					</g>
 				</svg>
 			</g>

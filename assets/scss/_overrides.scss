@@ -10,6 +10,12 @@
   }
 }
 
+h1 .td-cover-logo {
+  width: 60%;
+  margin-right: 0;
+  padding-right: 0;
+}
+
 .td {
   &-content p code {
     color: $code-color !important;
