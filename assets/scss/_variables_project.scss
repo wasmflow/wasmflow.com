@@ -62,10 +62,11 @@ $toc-link-hover: $orange;
 $link-color: $orange;
 $link-decoration: underline;
 
-$card-bg: desaturate(darken($primary, 20), 15);
+$card-bg: desaturate(darken($primary, 30), 15);
 $card-color: $gray-300;
+$card-border-color: desaturate(darken($primary, 40), 15);
 
-$code-color: $gray-100;
+$code-color: $orange;
 
 $component-active-bg: $success;
 $jumbotron-bg: $gray-900;
