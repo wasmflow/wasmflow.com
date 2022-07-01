@@ -10,5 +10,5 @@ description: >
 WebAssembly is the future but we're not 100% there yet. Tasks that WebAssembly can't (or won't do) and functionality that Wasmflow doesn't provide can still be enabled with native components.
 
 {{< card title="Note" >}}
-The guide to Native components is a work in progress. Visit the [https://github.com/wasmflow/wasmflow](wasmflow repository) so see examples of Rust-based native components.
+The guide to Native components is a work in progress. Visit the [wasmflow repository](https://github.com/wasmflow/wasmflow) so see examples of Rust-based native components.
 {{< /card >}}
