@@ -13,7 +13,6 @@ Wasmflow was built for the sole reason of making software more reusable. Ultimat
 Save the following in a file called `host.yaml`.
 
 ```yaml {title="./host.yaml"}
----
 # yaml-language-server: $schema=https://wasmflow.com/schema.json
 ---
 version: 1
