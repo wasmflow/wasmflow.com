@@ -1,7 +1,7 @@
 +++
 title = "Wasmflow"
 linkTitle = "Wasmflow"
-
+images = ["cover-wasmflow.png"]
 +++
 
 {{< blocks/cover title="Wasmflow" image_anchor="top" height="med" color="dark" >}}
@@ -12,7 +12,7 @@ linkTitle = "Wasmflow"
 	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="https://github.com/wasmflow/wasmflow/releases">
 		Download <i class="fab fa-github ml-2 "></i>
 	</a>
-	<p class="lead mt-5">Composable applications on a Zero Trust runtime</p>
+	<p class="lead mt-5">A composable application platform built with love and WebAssembly.</p>
 </div>
 <div class="mx-auto">
   <p class="mt-5">
@@ -30,10 +30,35 @@ linkTitle = "Wasmflow"
     <p class="text-regular text-left mt-4">Write code in any language and connect it to any other code with one tool.</p>
   </div>
   <div class="col-lg-6">
-    {{< imgproc wasmflow-diagram.png Fit "400x450" >}}{{< /imgproc >}}
+    {{< imgproc wasmflow-diagram.png Resize "400x" >}}{{< /imgproc >}}
   </div>
 </div>
 {{% /blocks/lead %}}
+
+<div class="installation row justify-content-center">
+<div class="col-xl-8 col-lg-12 col-md-10 col-sm-12">
+  <h3 class="">Installation</h3>
+  <p class="text-center">
+    Wasmflow has precompiled binaries for popular platforms or you can compile from <a href="https://github.com/wasmflow/wasmflow" class="text-primary">source</a>.
+  </p>
+  <div class="install-options">
+{{< tabpane >}}
+{{< tab header="**Platform**:" disabled=true />}}
+{{< tab header="Mac" >}}
+curl -fsSL https://raw.githubusercontent.com/wasmflow/wasmflow-installer/main/install.sh | /bin/bash
+{{< /tab >}}
+{{< tab header="Windows" lang="de" >}}
+powershell -Command "iwr -useb https://raw.githubusercontent.com/wasmflow/wasmflow-installer/main/install.ps1 | iex"
+{{< /tab >}}
+{{< tab header="Linux" lang="sw" >}}
+curl -fsSL https://raw.githubusercontent.com/wasmflow/wasmflow-installer/main/install.sh | /bin/bash
+{{< /tab >}}
+{{< /tabpane >}}
+  </div>
+</div>
+</div>
+
+
 
 {{< blocks/section color="primary" >}}
 {{% blocks/feature icon="fa-lightbulb" title="Join our Discord!" %}}
@@ -46,8 +71,9 @@ We accept [Pull Requests](https://github.com/wasmflow/wasmflow/pulls) **GitHub**
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fab fa-twitter" title="Follow us on Twitter!" url="https://twitter.com/wasmflow" %}}
-For announcements!
+{{% blocks/feature icon="fab fa-twitter" title="Follow us on Twitter!"%}}
+Follow [@wasmflow](https://twitter.com/wasmflow) for news
+and announcements!
 {{% /blocks/feature %}}
 
 

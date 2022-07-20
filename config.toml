@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://wasmflow.com"
 title = "Wasmflow"
 
 # Language settings
@@ -68,7 +68,7 @@ id = "G-81W8JFSVMM"
 [languages]
 [languages.en]
 title = "Wasmflow"
-description = "Wasmflow documentation and community site"
+description = "Wasmflow homepage"
 languageName = "English"
 # Weight used for sorting.
 weight = 1
@@ -92,6 +92,7 @@ tabWidth = 2
 section = ["HTML", "print", "RSS"]
 
 [params]
+images = ["cover-wasmflow.png"]
 copyright = "The Wasmflow Team"
 privacy_policy = "https://policies.google.com/privacy"
 
